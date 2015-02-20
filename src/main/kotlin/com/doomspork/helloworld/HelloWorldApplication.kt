@@ -5,6 +5,7 @@ import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
 import kotlin.platform.platformStatic
 import com.doomspork.helloworld.resources.HelloWorldResource
+import com.doomspork.helloworld.health.TemplateHealthCheck
 
 class HelloWorldApplication() : Application<HelloWorldConfiguration>() {
     class object {
@@ -14,11 +15,14 @@ class HelloWorldApplication() : Application<HelloWorldConfiguration>() {
     }
 
     override fun initialize(bootstrap: Bootstrap<HelloWorldConfiguration>) {
-        throw UnsupportedOperationException()
+        // Don't do anything
     }
 
     override fun run(config: HelloWorldConfiguration, env: Environment) {
         val resource =  HelloWorldResource(config.template, config.defaultName)
+        val healthCheck = TemplateHealthCheck(config.template)
+
+        env.healthChecks().register("template", healthCheck)
         env.jersey().register(resource)
     }
 
