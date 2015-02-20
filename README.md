@@ -1,2 +1,1 @@
-# kotlin-dropwizard
-A sample analytics web service with Dropwizard and Kotlin
+# Hello World with Dropwizard and Kotlin
