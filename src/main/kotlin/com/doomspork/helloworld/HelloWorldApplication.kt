@@ -4,6 +4,7 @@ import io.dropwizard.Application
 import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
 import kotlin.platform.platformStatic
+import com.doomspork.helloworld.resources.HelloWorldResource
 
 class HelloWorldApplication() : Application<HelloWorldConfiguration>() {
     class object {
@@ -17,7 +18,8 @@ class HelloWorldApplication() : Application<HelloWorldConfiguration>() {
     }
 
     override fun run(config: HelloWorldConfiguration, env: Environment) {
-        throw UnsupportedOperationException()
+        val resource =  HelloWorldResource(config.template, config.defaultName)
+        env.jersey().register(resource)
     }
 
 }
