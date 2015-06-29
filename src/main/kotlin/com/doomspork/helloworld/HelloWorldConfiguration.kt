@@ -5,15 +5,6 @@ import org.hibernate.validator.constraints.NotEmpty
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonCreator
 
-data class HelloWorldConfiguration() : Configuration() {
+data class HelloWorldConfiguration [JsonCreator] (JsonProperty("template") NotEmpty var template: String,
+                                                  JsonProperty("defaultName") NotEmpty var defaultName: String) : Configuration()
 
-    JsonProperty NotEmpty var template: String = ""
-
-    JsonProperty NotEmpty var defaultName: String = "Stranger"
-
-    JsonCreator constructor(JsonProperty("template") template: String, JsonProperty("defaultName") defaultName: String) : this() {
-        this.template = template
-        this.defaultName = defaultName
-    }
-
-}
