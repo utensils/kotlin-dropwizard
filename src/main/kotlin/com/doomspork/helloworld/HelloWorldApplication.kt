@@ -8,9 +8,9 @@ import com.doomspork.helloworld.resources.HelloWorldResource
 import com.doomspork.helloworld.health.TemplateHealthCheck
 
 class HelloWorldApplication() : Application<HelloWorldConfiguration>() {
-    class object {
+    companion object {
         platformStatic fun main(args: Array<String>) {
-            HelloWorldApplication().run(args)
+            HelloWorldApplication().run(*args)
         }
     }
 

@@ -12,18 +12,20 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kotlin.version>0.12.200</kotlin.version>
+        <dropwizard.version>0.8.1</dropwizard.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
-            <version>0.10.195</version>
+            <version>${kotlin.version}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
-            <version>0.7.1</version>
+            <version>${dropwizard.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -74,7 +76,7 @@
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <groupId>org.jetbrains.kotlin</groupId>
-                <version>0.10.195</version>
+                <version>${kotlin.version}</version>
                 <executions>
                     <execution>
                         <id>compile</id>
