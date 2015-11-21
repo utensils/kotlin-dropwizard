@@ -16,10 +16,6 @@ The [Getting Started](http://dropwizard.io/getting-started.html) tutorial from D
 
 	`java -jar target/kotlin-dropwizard-1.0.jar server hello-world.yml`
 
-## Author/Contact
-
-Written and maintained by [@doomspork](https://github.com/doomspork).
-
 ## License
 
-The project is made available under the [MIT](http://opensource.org/licenses/MIT) License.
+Please see [LICENSE](https://github.com/doomspork/kotlin-dropwizard/blob/master/LICENSE) for licensing details.
