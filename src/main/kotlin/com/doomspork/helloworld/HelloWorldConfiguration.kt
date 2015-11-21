@@ -1,10 +1,12 @@
 package com.doomspork.helloworld
 
-import io.dropwizard.Configuration
-import org.hibernate.validator.constraints.NotEmpty
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.JsonCreator
+import io.dropwizard.Configuration
 
-data class HelloWorldConfiguration [JsonCreator] (JsonProperty("template") NotEmpty var template: String,
-                                                  JsonProperty("defaultName") NotEmpty var defaultName: String) : Configuration()
+public class HelloWorldConfiguration() : Configuration() {
+    @JsonProperty("template")
+    public var template: String=""
 
+    @JsonProperty("defaultName")
+    public var defaultName: String="Stranger"
+}

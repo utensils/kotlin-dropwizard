@@ -12,8 +12,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>0.12.200</kotlin.version>
-        <dropwizard.version>0.8.1</dropwizard.version>
+        <kotlin.version>1.0.0-beta-2423</kotlin.version>
+        <dropwizard.version>0.9.1</dropwizard.version>
+        <mainClass>com.doomspork.helloworld.HelloWorldApplication</mainClass>
     </properties>
 
     <dependencies>
@@ -30,7 +31,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -66,7 +67,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.doomspork.helloworld.HelloWorldApplication</mainClass>
+                                    <mainClass>${mainClass}</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

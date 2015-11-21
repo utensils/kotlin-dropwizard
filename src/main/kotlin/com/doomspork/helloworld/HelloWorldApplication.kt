@@ -3,13 +3,13 @@ package com.doomspork.helloworld
 import io.dropwizard.Application
 import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
-import kotlin.platform.platformStatic
 import com.doomspork.helloworld.resources.HelloWorldResource
 import com.doomspork.helloworld.health.TemplateHealthCheck
 
 class HelloWorldApplication() : Application<HelloWorldConfiguration>() {
     companion object {
-        platformStatic fun main(args: Array<String>) {
+        @JvmStatic
+        fun main(args: Array<String>) {
             HelloWorldApplication().run(*args)
         }
     }

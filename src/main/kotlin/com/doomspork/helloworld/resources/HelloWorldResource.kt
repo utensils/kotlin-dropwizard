@@ -10,12 +10,14 @@ import com.google.common.base.Optional
 import javax.ws.rs.QueryParam
 import com.doomspork.helloworld.core.Saying
 
-Path("/hello-world")
-Produces(MediaType.APPLICATION_JSON)
+@Path("/hello-world")
+@Produces(MediaType.APPLICATION_JSON)
 class HelloWorldResource(val template: String, val defaultName: String) {
     var counter = AtomicLong()
 
-    Timed GET fun sayHello(QueryParam("name") name: Optional<String>) : Saying {
+    @Timed
+    @GET
+    fun sayHello(@QueryParam("name") name: Optional<String>): Saying {
         val value = java.lang.String.format(template, name.or(defaultName))
         return Saying(counter.incrementAndGet(), value)
     }
