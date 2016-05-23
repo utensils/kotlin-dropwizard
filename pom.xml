@@ -12,8 +12,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.0.0-beta-2423</kotlin.version>
-        <dropwizard.version>0.9.1</dropwizard.version>
+        <kotlin.version>1.0.2</kotlin.version>
+        <dropwizard.version>0.9.2</dropwizard.version>
         <mainClass>com.doomspork.helloworld.HelloWorldApplication</mainClass>
     </properties>
 
