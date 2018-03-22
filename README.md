@@ -6,7 +6,7 @@ The [Getting Started](http://dropwizard.io/getting-started.html) tutorial from D
 
 1. Clone the project:
 
-	`git clone git@github.com/doomspork/kotlin-dropwizard`
+	`git clone git@github.com/doomspork/kotlin-dropwizard.git`
 
 2. Navigate to `kotlin-dropwizard` and package everything:
 
